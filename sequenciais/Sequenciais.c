@@ -148,6 +148,10 @@ void s00000350(void)
  */
 void s00000400(void)
 {
+    float v1, v2;
+    scanf("%f", &v1);
+    scanf("%f", &v2);
+    printf("%.2f", (v1+v2+fabs(v1-v2))/2);
 }
 
 /*
@@ -415,6 +419,6 @@ void s00001800(void)
 
 int main(void)
 {
-    s00000350();
+    s00000400();
     return 0;
 }
