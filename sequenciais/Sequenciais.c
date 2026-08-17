@@ -251,6 +251,13 @@ void s00001350(void)
  */
 void s00001400(void)
 {
+    int hora, minuto, segundo, transcorridos;
+    scanf("%d", &hora);
+    scanf("%d", &minuto);
+    scanf("%d", &segundo);
+    scanf("%d", &transcorridos);
+    int total = (segundo+minuto*60+hora*3600+transcorridos) % 86400;
+    printf("%d %d %d", total/3600, (total%3600)/60, total%60);
 }
 
 /*
@@ -378,6 +385,6 @@ void s00001800(void)
 
 int main(void)
 {
-    s00001500();
+    s00001400();
     return 0;
 }
