@@ -263,6 +263,12 @@ void s00001400(void)
  */
 void s00001500(void)
 {
+    int turma,alunos;
+    scanf("%d", &turma);
+    scanf("%d", &alunos);
+    int r = turma%alunos;
+    int grupos = (turma-r)/alunos;
+    printf("Grupos: %d Sobra: %d", grupos, r);
 }
 
 /*
@@ -372,6 +378,6 @@ void s00001800(void)
 
 int main(void)
 {
-    s00001600();
+    s00001500();
     return 0;
 }
