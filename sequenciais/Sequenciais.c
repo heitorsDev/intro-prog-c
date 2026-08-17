@@ -89,6 +89,14 @@ void s00000210(void)
  */
 void s00000220(void)
 {
+    float ax, ay, az, bx, by, bz;
+    scanf("%f", &ax);
+    scanf("%f", &ay);
+    scanf("%f", &az);
+    scanf("%f", &bx);
+    scanf("%f", &by);
+    scanf("%f", &bz);
+    printf("%.2f", ax*bx+ay*by+az*bz);
 }
 
 /*
@@ -391,6 +399,6 @@ void s00001800(void)
 
 int main(void)
 {
-    s00000210();
+    s00000220();
     return 0;
 }
