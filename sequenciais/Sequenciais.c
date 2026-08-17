@@ -301,6 +301,13 @@ void s00001100(void)
  */
 void s00001200(void)
 {
+    int hi, mi, hf, mf;
+    scanf("%d", &hi);
+    scanf("%d", &mi);
+    scanf("%d", &hf);
+    scanf("%d", &mf);
+    int duracao = (hf*60+mf)-(hi*60+mi);
+    printf("%d %d", duracao/60, duracao%60);
 }
 
 /*
@@ -467,6 +474,6 @@ void s00001800(void)
 
 int main(void)
 {
-    s00001100();
+    s00001200();
     return 0;
 }
