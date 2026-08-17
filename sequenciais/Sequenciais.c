@@ -241,6 +241,12 @@ void s00000800(void)
  */
 void s00000900(void)
 {
+    float l1, l2, l3;
+    scanf("%f", &l1);
+    scanf("%f", &l2);
+    scanf("%f", &l3);
+    float s = (l1+l2+l3)/2;
+    printf("%.2f", sqrt(s*(s-l1)*(s-l2)*(s-l3)));
 }
 
 /*
@@ -449,6 +455,6 @@ void s00001800(void)
 
 int main(void)
 {
-    s00000800();
+    s00000900();
     return 0;
 }
