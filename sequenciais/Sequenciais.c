@@ -180,6 +180,13 @@ void s00000500(void)
  */
 void s00000600(void)
 {
+    float v1, v2, v3;
+    scanf("%f", &v1);
+    scanf("%f", &v2);
+    scanf("%f", &v3);
+    float maior = (v1+v2+fabs(v1-v2))/2;
+    maior = (maior+v3+fabs(maior-v3))/2;
+    printf("%.2f", maior);
 }
 
 /*
@@ -424,6 +431,6 @@ void s00001800(void)
 
 int main(void)
 {
-    s00000500();
+    s00000600();
     return 0;
 }
