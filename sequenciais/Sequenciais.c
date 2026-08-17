@@ -225,6 +225,9 @@ void s00000700(void)
  */
 void s00000800(void)
 {
+    int total;
+    scanf("%d", &total);
+    printf("%d %d %d", total/3600, (total%3600)/60, total%60);
 }
 
 /*
@@ -446,6 +449,6 @@ void s00001800(void)
 
 int main(void)
 {
-    s00000700();
+    s00000800();
     return 0;
 }
