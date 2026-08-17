@@ -128,6 +128,14 @@ void s00000300(void)
  */
 void s00000350(void)
 {
+    float a, b, c;
+    scanf("%f", &a);
+    scanf("%f", &b);
+    scanf("%f", &c);
+    float delta = b*b-4*a*c;
+    float r1 = (-b+sqrt(delta))/(2*a);
+    float r2 = (-b-sqrt(delta))/(2*a);
+    printf("%.2f", r1*r2);
 }
 
 /*
@@ -407,6 +415,6 @@ void s00001800(void)
 
 int main(void)
 {
-    s00000300();
+    s00000350();
     return 0;
 }
