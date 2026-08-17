@@ -10,6 +10,9 @@
  */
 void s00000050(void)
 {
+    float n;
+    scanf("%f", &n);
+    printf("%.2f", n*n);
 }
 
 /*
@@ -19,6 +22,10 @@ void s00000050(void)
  */
 void s00000100(void)
 {
+    int n1, n2;
+    scanf("%d", &n1);
+    scanf("%d", &n2);
+    printf("%d", n1+n2);
 }
 
 /*
@@ -30,6 +37,12 @@ void s00000100(void)
  */
 void s00000150(void)
 {
+    float n1, n2, n3, n4;
+    scanf("%f", &n1);
+    scanf("%f", &n2);
+    scanf("%f", &n3);
+    scanf("%f", &n4);
+    printf("%.2f", (n1+n2+n3+n4)/4);
 }
 
 /*
@@ -41,6 +54,10 @@ void s00000150(void)
  */
 void s00000200(void)
 {
+    float v1, v2;
+    scanf("%f", &v1);
+    scanf("%f", &v2);
+    printf("%.2f", (v1*v2)/2);
 }
 
 /*
@@ -292,9 +309,30 @@ void s00001700(void)
  */
 void s00001800(void)
 {
+    int n1,n2,n3,n4,n5;
+    scanf("%d", &n1);
+    scanf("%d", &n2);
+    scanf("%d", &n3);
+    scanf("%d", &n4);
+    scanf("%d", &n5);
+    int sum = 0;
+    if (n1%2!=0){
+        sum+=n1;
+    }
+    if (n2%2!=0){
+        sum+=n2;
+    }if (n3%2!=0){
+        sum+=n3;
+    }if (n4%2!=0){
+        sum+=n4;
+    }if (n5%2!=0){
+        sum+=n5;
+    }
+    printf("%d", sum);
 }
 
 int main(void)
 {
+    s00001800();
     return 0;
 }
