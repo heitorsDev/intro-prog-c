@@ -259,6 +259,9 @@ void s00000900(void)
  */
 void s00001000(void)
 {
+    int n;
+    scanf("%d", &n);
+    printf("%d", n%10 + (n/10)%10 + (n/100)%10 + (n/1000)%10);
 }
 
 /*
@@ -455,6 +458,6 @@ void s00001800(void)
 
 int main(void)
 {
-    s00000900();
+    s00001000();
     return 0;
 }
