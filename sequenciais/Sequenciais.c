@@ -318,6 +318,14 @@ void s00001200(void)
  */
 void s00001300(void)
 {
+    int h1, m1, s1, h2, m2, s2;
+    scanf("%d", &h1);
+    scanf("%d", &m1);
+    scanf("%d", &s1);
+    scanf("%d", &h2);
+    scanf("%d", &m2);
+    scanf("%d", &s2);
+    printf("%d", (h2*3600+m2*60+s2)-(h1*3600+m1*60+s1));
 }
 
 /*
@@ -474,6 +482,6 @@ void s00001800(void)
 
 int main(void)
 {
-    s00001200();
+    s00001300();
     return 0;
 }
