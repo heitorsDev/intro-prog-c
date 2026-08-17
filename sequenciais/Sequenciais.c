@@ -279,6 +279,15 @@ void s00001000(void)
  */
 void s00001100(void)
 {
+    int v1, v2, v3;
+    scanf("%d", &v1);
+    scanf("%d", &v2);
+    scanf("%d", &v3);
+    int aux = v3;
+    v3 = v2;
+    v2 = v1;
+    v1 = aux;
+    printf("%d %d %d", v1, v2, v3);
 }
 
 /*
@@ -458,6 +467,6 @@ void s00001800(void)
 
 int main(void)
 {
-    s00001000();
+    s00001100();
     return 0;
 }
