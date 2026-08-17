@@ -289,6 +289,12 @@ void s00001600(void)
  */
 void s00001650(void)
 {
+    int n;
+    scanf("%d", &n);
+    int left = n-(n%1000000000);
+    int lefts = left/1000000000;
+
+    printf("%d", (n-left)*10+lefts);
 }
 
 /*
@@ -299,6 +305,27 @@ void s00001650(void)
  */
 void s00001700(void)
 {
+
+    int n1,n2,n3,n4,n5;
+    scanf("%d", &n1);
+    scanf("%d", &n2);
+    scanf("%d", &n3);
+    scanf("%d", &n4);
+    scanf("%d", &n5);
+    int sum = 0;
+    if (n1%2==0){
+        sum+=1;
+    }
+    if (n2%2==0){
+        sum+=1;
+    }if (n3%2==0){
+        sum+=1;
+    }if (n4%2==0){
+        sum+=1;
+    }if (n5%2==0){
+        sum+=1;
+    }
+    printf("%d", sum);
 }
 
 /*
@@ -333,6 +360,6 @@ void s00001800(void)
 
 int main(void)
 {
-    s00001800();
+    s00001650();
     return 0;
 }
