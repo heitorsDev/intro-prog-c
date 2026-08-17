@@ -199,6 +199,21 @@ void s00000600(void)
  */
 void s00000700(void)
 {
+    int valor;
+    scanf("%d", &valor);
+    int n100 = valor/100;
+    valor = valor%100;
+    int n50 = valor/50;
+    valor = valor%50;
+    int n20 = valor/20;
+    valor = valor%20;
+    int n10 = valor/10;
+    valor = valor%10;
+    int n5 = valor/5;
+    valor = valor%5;
+    int n2 = valor/2;
+    valor = valor%2;
+    printf("100: %d 50: %d 20: %d 10: %d 5: %d 2: %d 1: %d", n100, n50, n20, n10, n5, n2, valor);
 }
 
 /*
@@ -431,6 +446,6 @@ void s00001800(void)
 
 int main(void)
 {
-    s00000600();
+    s00000700();
     return 0;
 }
