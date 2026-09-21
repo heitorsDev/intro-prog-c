@@ -1727,6 +1727,21 @@ void c0003650(void)
  */
 void c00003700(void)
 {
+    int lancamentos, acervo;
+    scanf("%d", &lancamentos);
+    scanf("%d", &acervo);
+    int gratis = lancamentos/2;
+    int gratisLancamento = gratis;
+    if (gratisLancamento > lancamentos) {
+        gratisLancamento = lancamentos;
+    }
+    int restante = gratis-gratisLancamento;
+    int gratisAcervo = restante;
+    if (gratisAcervo > acervo) {
+        gratisAcervo = acervo;
+    }
+    float total = (lancamentos-gratisLancamento)*5 + (acervo-gratisAcervo)*3;
+    printf("%.2f", total);
 }
 
 int main(void)
