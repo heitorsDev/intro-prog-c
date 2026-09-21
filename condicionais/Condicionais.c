@@ -347,6 +347,39 @@ void c00000500(void)
  */
 void c00000600(void)
 {
+    float n1, n2, n3;
+    scanf("%f", &n1);
+    scanf("%f", &n2);
+    scanf("%f", &n3);
+    float mh = 3/(1/n1+1/n2+1/n3);
+    if (mh < 6.0) {
+        float n4;
+        scanf("%f", &n4);
+        float menor = n1;
+        if (n2 < menor) menor = n2;
+        if (n3 < menor) menor = n3;
+        if (menor == n1) {
+            n1 = n4;
+        } else if (menor == n2) {
+            n2 = n4;
+        } else {
+            n3 = n4;
+        }
+        mh = 3/(1/n1+1/n2+1/n3);
+    }
+    int conceito;
+    if (mh < 6.0) {
+        conceito = 0;
+    } else if (mh < 7.0) {
+        conceito = 1;
+    } else if (mh < 8.0) {
+        conceito = 2;
+    } else if (mh < 9.0) {
+        conceito = 3;
+    } else {
+        conceito = 4;
+    }
+    printf("%.2f %d", mh, conceito);
 }
 
 /*
