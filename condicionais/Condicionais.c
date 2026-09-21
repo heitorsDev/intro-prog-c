@@ -523,6 +523,19 @@ void c00000660(void)
  */
 void c00000700(void)
 {
+    int he, hs;
+    scanf("%d", &he);
+    scanf("%d", &hs);
+    int horas = hs-he;
+    int total;
+    if (horas <= 2) {
+        total = horas*5;
+    } else if (horas <= 4) {
+        total = 2*5 + (horas-2)*2;
+    } else {
+        total = 2*5 + 2*2 + (horas-4)*1;
+    }
+    printf("%d", total);
 }
 
 /*
