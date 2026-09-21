@@ -1222,6 +1222,29 @@ void c00001850(void)
  */
 void c00001900(void)
 {
+    int selos, envelopes, centavos;
+    scanf("%d", &selos);
+    scanf("%d", &envelopes);
+    scanf("%d", &centavos);
+    int cartas = 0;
+    while (1) {
+        while (selos < 1 && centavos >= 12) {
+            selos++;
+            centavos -= 12;
+        }
+        while (envelopes < 1 && centavos >= 5) {
+            envelopes++;
+            centavos -= 5;
+        }
+        if (selos >= 1 && envelopes >= 1) {
+            selos--;
+            envelopes--;
+            cartas++;
+        } else {
+            break;
+        }
+    }
+    printf("%d", cartas);
 }
 
 /*
