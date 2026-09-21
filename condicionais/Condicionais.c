@@ -771,6 +771,12 @@ void c00000866(void)
  */
 void c00000900(void)
 {
+    float valorHora;
+    int he, hs;
+    scanf("%f", &valorHora);
+    scanf("%d", &he);
+    scanf("%d", &hs);
+    printf("%.2f", (hs-he)*valorHora);
 }
 
 /*
