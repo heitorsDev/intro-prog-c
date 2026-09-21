@@ -496,6 +496,18 @@ void c00000650(void)
  */
 void c00000660(void)
 {
+    int hi, mi, hf, mf;
+    scanf("%d", &hi);
+    scanf("%d", &mi);
+    scanf("%d", &hf);
+    scanf("%d", &mf);
+    int inicio = hi*60+mi;
+    int fim = hf*60+mf;
+    int duracao = fim-inicio;
+    if (duracao < 0) {
+        duracao += 1440;
+    }
+    printf("%d %d", duracao/60, duracao%60);
 }
 
 /*
