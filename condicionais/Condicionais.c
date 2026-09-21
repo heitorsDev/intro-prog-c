@@ -123,6 +123,16 @@ void c00000200(void)
  */
 void c00000250(void)
 {
+    float n1, n2, n3, n4;
+    scanf("%f", &n1);
+    scanf("%f", &n2);
+    scanf("%f", &n3);
+    scanf("%f", &n4);
+    float menor = n1;
+    if (n2 < menor) menor = n2;
+    if (n3 < menor) menor = n3;
+    if (n4 < menor) menor = n4;
+    printf("%.2f", (n1+n2+n3+n4-menor)/3);
 }
 
 /*
