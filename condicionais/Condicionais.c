@@ -842,6 +842,16 @@ void c00001100(void)
  */
 void c00001200(void)
 {
+    float valorHora;
+    int he, hs;
+    scanf("%f", &valorHora);
+    scanf("%d", &he);
+    scanf("%d", &hs);
+    int horas = hs-he;
+    if (horas <= 0) {
+        horas += 24;
+    }
+    printf("%.2f", horas*valorHora);
 }
 
 /*
