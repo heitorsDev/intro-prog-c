@@ -46,6 +46,14 @@ void c00000040(void)
  */
 void c00000060(void)
 {
+    float v1, v2;
+    scanf("%f", &v1);
+    scanf("%f", &v2);
+    if (v1 > v2) {
+        printf("%.2f", v1);
+    } else {
+        printf("%.2f", v2);
+    }
 }
 
 /*
