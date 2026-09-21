@@ -1007,6 +1007,27 @@ void c00001500(void)
  */
 void c00001550(void)
 {
+    int d, m, a;
+    scanf("%d", &d);
+    scanf("%d", &m);
+    scanf("%d", &a);
+    int valido = 1;
+    if (m < 1 || m > 12 || d < 1) {
+        valido = 0;
+    } else {
+        int diasNoMes;
+        if (m == 4 || m == 6 || m == 9 || m == 11) {
+            diasNoMes = 30;
+        } else if (m == 2) {
+            diasNoMes = (a % 4 == 0) ? 29 : 28;
+        } else {
+            diasNoMes = 31;
+        }
+        if (d > diasNoMes) {
+            valido = 0;
+        }
+    }
+    printf("%d", valido);
 }
 
 /*
