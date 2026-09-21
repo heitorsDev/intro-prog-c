@@ -708,6 +708,31 @@ void c00000860(void)
  */
 void c00000865(void)
 {
+    int r, t;
+    scanf("%d", &r);
+    scanf("%d", &t);
+    int totalMin = 14400;
+    int result;
+    if (r == t) {
+        result = r + totalMin/150;
+    } else if (r < t) {
+        int diff = t-r;
+        int custoIgualar = diff*120;
+        if (custoIgualar <= totalMin) {
+            result = t + (totalMin-custoIgualar)/150;
+        } else {
+            result = r + totalMin/120;
+        }
+    } else {
+        int diff = r-t;
+        int custoIgualar = diff*30;
+        if (custoIgualar <= totalMin) {
+            result = r + (totalMin-custoIgualar)/150;
+        } else {
+            result = t + totalMin/30;
+        }
+    }
+    printf("%d", result);
 }
 
 /*
