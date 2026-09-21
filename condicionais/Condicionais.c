@@ -558,6 +558,30 @@ void c00000700(void)
  */
 void c00000750(void)
 {
+    float peso1, valor1, peso2, valor2, limite;
+    scanf("%f", &peso1);
+    scanf("%f", &valor1);
+    scanf("%f", &peso2);
+    scanf("%f", &valor2);
+    scanf("%f", &limite);
+    int cabe1 = peso1 <= limite;
+    int cabe2 = peso2 <= limite;
+    int cabeAmbas = (peso1+peso2) <= limite;
+    if (cabeAmbas) {
+        printf("3");
+    } else if (cabe1 && cabe2) {
+        if (valor1 >= valor2) {
+            printf("1");
+        } else {
+            printf("2");
+        }
+    } else if (cabe1) {
+        printf("1");
+    } else if (cabe2) {
+        printf("2");
+    } else {
+        printf("0");
+    }
 }
 
 /*
