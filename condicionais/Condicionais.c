@@ -643,6 +643,18 @@ void c00000810(void)
  */
 void c00000850(void)
 {
+    float l1, c1, a1, l2, c2, a2;
+    scanf("%f", &l1);
+    scanf("%f", &c1);
+    scanf("%f", &a1);
+    scanf("%f", &l2);
+    scanf("%f", &c2);
+    scanf("%f", &a2);
+    if (l1 < l2 && c1 < c2 && a1 < a2) {
+        printf("1");
+    } else {
+        printf("0");
+    }
 }
 
 /*
