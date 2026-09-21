@@ -1605,6 +1605,20 @@ void c00003250(void)
  */
 void c00003300(void)
 {
+    float x1, y1, x2, y2, x, y;
+    scanf("%f", &x1);
+    scanf("%f", &y1);
+    scanf("%f", &x2);
+    scanf("%f", &y2);
+    scanf("%f", &x);
+    scanf("%f", &y);
+    if (x < x1 || x > x2 || y < y1 || y > y2) {
+        printf("0");
+    } else if (x == x1 || x == x2 || y == y1 || y == y2) {
+        printf("2");
+    } else {
+        printf("1");
+    }
 }
 
 /*
