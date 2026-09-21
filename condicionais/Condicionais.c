@@ -324,6 +324,15 @@ void c00000460(void)
  */
 void c00000500(void)
 {
+    float n1, n2, n3;
+    scanf("%f", &n1);
+    scanf("%f", &n2);
+    scanf("%f", &n3);
+    if (n1 == 0 || n2 == 0 || n3 == 0) {
+        printf("0.00");
+    } else {
+        printf("%.2f", 3/(1/n1+1/n2+1/n3));
+    }
 }
 
 /*
