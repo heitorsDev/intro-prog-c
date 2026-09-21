@@ -1409,6 +1409,26 @@ void c00002001(void)
  */
 void c00002100(void)
 {
+    float x1, y1, x2, y2, x3, y3, x4, y4;
+    scanf("%f", &x1);
+    scanf("%f", &y1);
+    scanf("%f", &x2);
+    scanf("%f", &y2);
+    scanf("%f", &x3);
+    scanf("%f", &y3);
+    scanf("%f", &x4);
+    scanf("%f", &y4);
+    float l1 = sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2));
+    float l2 = sqrt((x2-x3)*(x2-x3)+(y2-y3)*(y2-y3));
+    float l3 = sqrt((x3-x4)*(x3-x4)+(y3-y4)*(y3-y4));
+    float l4 = sqrt((x4-x1)*(x4-x1)+(y4-y1)*(y4-y1));
+    float diag1 = sqrt((x1-x3)*(x1-x3)+(y1-y3)*(y1-y3));
+    float diag2 = sqrt((x2-x4)*(x2-x4)+(y2-y4)*(y2-y4));
+    if (l1 == l2 && l2 == l3 && l3 == l4 && diag1 == diag2) {
+        printf("1");
+    } else {
+        printf("0");
+    }
 }
 
 /*
