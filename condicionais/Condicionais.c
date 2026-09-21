@@ -1088,6 +1088,30 @@ void c00001700(void)
  */
 void c00001750(void)
 {
+    int d1, m1, a1, d2, m2, a2, d3, m3, a3;
+    scanf("%d", &d1);
+    scanf("%d", &m1);
+    scanf("%d", &a1);
+    scanf("%d", &d2);
+    scanf("%d", &m2);
+    scanf("%d", &a2);
+    scanf("%d", &d3);
+    scanf("%d", &m3);
+    scanf("%d", &a3);
+    int v1 = a1*10000+m1*100+d1;
+    int v2 = a2*10000+m2*100+d2;
+    int v3 = a3*10000+m3*100+d3;
+    int t;
+    if (v1 > v2) {
+        t=v1; v1=v2; v2=t; t=d1; d1=d2; d2=t; t=m1; m1=m2; m2=t; t=a1; a1=a2; a2=t;
+    }
+    if (v2 > v3) {
+        t=v2; v2=v3; v3=t; t=d2; d2=d3; d3=t; t=m2; m2=m3; m3=t; t=a2; a2=a3; a3=t;
+    }
+    if (v1 > v2) {
+        t=v1; v1=v2; v2=t; t=d1; d1=d2; d2=t; t=m1; m1=m2; m2=t; t=a1; a1=a2; a2=t;
+    }
+    printf("%02d/%02d/%04d %02d/%02d/%04d %02d/%02d/%04d", d1, m1, a1, d2, m2, a2, d3, m3, a3);
 }
 
 /*
