@@ -1062,6 +1062,20 @@ void c00001600(void)
  */
 void c00001700(void)
 {
+    int d1, m1, a1, d2, m2, a2;
+    scanf("%d", &d1);
+    scanf("%d", &m1);
+    scanf("%d", &a1);
+    scanf("%d", &d2);
+    scanf("%d", &m2);
+    scanf("%d", &a2);
+    int v1 = a1*10000+m1*100+d1;
+    int v2 = a2*10000+m2*100+d2;
+    if (v1 <= v2) {
+        printf("%02d/%02d/%04d %02d/%02d/%04d", d1, m1, a1, d2, m2, a2);
+    } else {
+        printf("%02d/%02d/%04d %02d/%02d/%04d", d2, m2, a2, d1, m1, a1);
+    }
 }
 
 /*
