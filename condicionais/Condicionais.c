@@ -1584,6 +1584,13 @@ void c00003200(void)
  */
 void c00003250(void)
 {
+    int n;
+    scanf("%d", &n);
+    int a = n/100, b = (n/10)%10, c = n%10, t;
+    if (a < b) { t=a; a=b; b=t; }
+    if (b < c) { t=b; b=c; c=t; }
+    if (a < b) { t=a; a=b; b=t; }
+    printf("%d", a*100+b*10+c);
 }
 
 /*
