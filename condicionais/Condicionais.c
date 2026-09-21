@@ -240,6 +240,19 @@ void c00000400(void)
  */
 void c00000410(void)
 {
+    float l1, l2, l3;
+    scanf("%f", &l1);
+    scanf("%f", &l2);
+    scanf("%f", &l3);
+    if (!(l1+l2 > l3 && l1+l3 > l2 && l2+l3 > l1)) {
+        printf("0");
+    } else if (l1 == l2 && l2 == l3) {
+        printf("1");
+    } else if (l1 == l2 || l2 == l3 || l1 == l3) {
+        printf("2");
+    } else {
+        printf("3");
+    }
 }
 
 /*
