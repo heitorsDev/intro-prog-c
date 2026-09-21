@@ -217,6 +217,16 @@ void c00000360(void)
  */
 void c00000400(void)
 {
+    float l1, l2, l3;
+    scanf("%f", &l1);
+    scanf("%f", &l2);
+    scanf("%f", &l3);
+    if (l1+l2 > l3 && l1+l3 > l2 && l2+l3 > l1) {
+        float s = (l1+l2+l3)/2;
+        printf("%.2f", sqrt(s*(s-l1)*(s-l2)*(s-l3)));
+    } else {
+        printf("-1");
+    }
 }
 
 /*
