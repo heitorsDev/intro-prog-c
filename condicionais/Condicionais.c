@@ -816,6 +816,20 @@ void c00001000(void)
  */
 void c00001100(void)
 {
+    float valorHora;
+    int he, hs;
+    scanf("%f", &valorHora);
+    scanf("%d", &he);
+    scanf("%d", &hs);
+    float total = 0;
+    for (int h = he; h < hs; h++) {
+        if (h < 6 || h >= 20) {
+            total += valorHora*1.2;
+        } else {
+            total += valorHora;
+        }
+    }
+    printf("%.2f", total);
 }
 
 /*
