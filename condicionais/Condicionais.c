@@ -102,6 +102,14 @@ void c00000100(void)
  */
 void c00000200(void)
 {
+    float v1, v2, v3, aux;
+    scanf("%f", &v1);
+    scanf("%f", &v2);
+    scanf("%f", &v3);
+    if (v1 > v2) { aux = v1; v1 = v2; v2 = aux; }
+    if (v2 > v3) { aux = v2; v2 = v3; v3 = aux; }
+    if (v1 > v2) { aux = v1; v1 = v2; v2 = aux; }
+    printf("%.2f %.2f %.2f", v1, v2, v3);
 }
 
 /*
