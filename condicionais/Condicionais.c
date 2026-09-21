@@ -195,6 +195,17 @@ void c00000350(void)
  */
 void c00000360(void)
 {
+    float a, b, c;
+    scanf("%f", &a);
+    scanf("%f", &b);
+    scanf("%f", &c);
+    if (a*a == b*b+c*c) {
+        printf("0");
+    } else if (a*a > b*b+c*c) {
+        printf("1");
+    } else {
+        printf("2");
+    }
 }
 
 /*
