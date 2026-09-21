@@ -1191,6 +1191,23 @@ void c00001800(void)
  */
 void c00001850(void)
 {
+    int d, m, a;
+    scanf("%d", &d);
+    scanf("%d", &m);
+    scanf("%d", &a);
+    int dias = d;
+    for (int i = 1; i < m; i++) {
+        int diasPorMes;
+        if (i == 4 || i == 6 || i == 9 || i == 11) {
+            diasPorMes = 30;
+        } else if (i == 2) {
+            diasPorMes = (a % 4 == 0) ? 29 : 28;
+        } else {
+            diasPorMes = 31;
+        }
+        dias += diasPorMes;
+    }
+    printf("%d", dias);
 }
 
 /*
