@@ -147,6 +147,18 @@ void c00000250(void)
  */
 void c00000300(void)
 {
+    float a, b, c;
+    scanf("%f", &a);
+    scanf("%f", &b);
+    scanf("%f", &c);
+    float delta = b*b-4*a*c;
+    if (delta < 0) {
+        printf("A equação não possui raízes reais");
+    } else {
+        float r1 = (-b-sqrt(delta))/(2*a);
+        float r2 = (-b+sqrt(delta))/(2*a);
+        printf("%.2f %.2f", r1, r2);
+    }
 }
 
 /*
