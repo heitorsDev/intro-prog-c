@@ -395,6 +395,37 @@ void c00000600(void)
  */
 void c00000625(void)
 {
+    int cod1, cod2, cod3, cod4, cod5;
+    int v1, v2, v3, v4, v5;
+    scanf("%d %d", &cod1, &v1);
+    scanf("%d %d", &cod2, &v2);
+    scanf("%d %d", &cod3, &v3);
+    scanf("%d %d", &cod4, &v4);
+    scanf("%d %d", &cod5, &v5);
+    int total = v1+v2+v3+v4+v5;
+    printf("%d %.2f%% ", cod1, v1*100.0/total);
+    printf("%d %.2f%% ", cod2, v2*100.0/total);
+    printf("%d %.2f%% ", cod3, v3*100.0/total);
+    printf("%d %.2f%% ", cod4, v4*100.0/total);
+    printf("%d %.2f%%\n", cod5, v5*100.0/total);
+    if (v1 > total/2) {
+        printf("%d %.2f%%", cod1, v1*100.0/total);
+    } else if (v2 > total/2) {
+        printf("%d %.2f%%", cod2, v2*100.0/total);
+    } else if (v3 > total/2) {
+        printf("%d %.2f%%", cod3, v3*100.0/total);
+    } else if (v4 > total/2) {
+        printf("%d %.2f%%", cod4, v4*100.0/total);
+    } else if (v5 > total/2) {
+        printf("%d %.2f%%", cod5, v5*100.0/total);
+    } else {
+        int m1c = cod1, m1v = v1, m2c = cod2, m2v = v2, tc, tv;
+        if (m2v > m1v) { tc = m1c; m1c = m2c; m2c = tc; tv = m1v; m1v = m2v; m2v = tv; }
+        if (v3 > m1v) { m2c = m1c; m2v = m1v; m1c = cod3; m1v = v3; } else if (v3 > m2v) { m2c = cod3; m2v = v3; }
+        if (v4 > m1v) { m2c = m1c; m2v = m1v; m1c = cod4; m1v = v4; } else if (v4 > m2v) { m2c = cod4; m2v = v4; }
+        if (v5 > m1v) { m2c = m1c; m2v = m1v; m1c = cod5; m1v = v5; } else if (v5 > m2v) { m2c = cod5; m2v = v5; }
+        printf("%d %.2f%% %d %.2f%%", m1c, m1v*100.0/total, m2c, m2v*100.0/total);
+    }
 }
 
 /*
