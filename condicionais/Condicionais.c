@@ -1631,6 +1631,19 @@ void c00003300(void)
  */
 void c00003400(void)
 {
+    int n;
+    scanf("%d", &n);
+    int original = n;
+    int reverso = 0;
+    while (n > 0) {
+        reverso = reverso*10 + n%10;
+        n /= 10;
+    }
+    if (reverso == original) {
+        printf("0");
+    } else {
+        printf("1");
+    }
 }
 
 /*
