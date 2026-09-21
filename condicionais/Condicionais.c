@@ -29,6 +29,13 @@ void c00000020(void)
  */
 void c00000040(void)
 {
+    int n;
+    scanf("%d", &n);
+    if (n % 2 == 0) {
+        printf("0");
+    } else {
+        printf("1");
+    }
 }
 
 /*
