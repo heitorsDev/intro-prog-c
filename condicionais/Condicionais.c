@@ -744,6 +744,22 @@ void c00000865(void)
  */
 void c00000866(void)
 {
+    int dn, mn, an, da, ma, aa;
+    scanf("%d", &dn);
+    scanf("%d", &mn);
+    scanf("%d", &an);
+    scanf("%d", &da);
+    scanf("%d", &ma);
+    scanf("%d", &aa);
+    int idade = aa-an;
+    if (ma < mn || (ma == mn && da < dn)) {
+        idade--;
+    }
+    if (idade >= 18) {
+        printf("1");
+    } else {
+        printf("0");
+    }
 }
 
 /*
