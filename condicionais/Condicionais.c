@@ -171,6 +171,17 @@ void c00000300(void)
  */
 void c00000350(void)
 {
+    float a, b, c;
+    scanf("%f", &a);
+    scanf("%f", &b);
+    scanf("%f", &c);
+    if (a == b && b == c) {
+        printf("0");
+    } else if (a == b || b == c || a == c) {
+        printf("1");
+    } else {
+        printf("2");
+    }
 }
 
 /*
