@@ -64,6 +64,14 @@ void c00000060(void)
  */
 void c00000080(void)
 {
+    float v1, v2;
+    scanf("%f", &v1);
+    scanf("%f", &v2);
+    if (v1 <= v2) {
+        printf("%.2f %.2f", v1, v2);
+    } else {
+        printf("%.2f %.2f", v2, v1);
+    }
 }
 
 /*
