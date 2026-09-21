@@ -1521,6 +1521,24 @@ void c00003000(void)
  */
 void c00003100(void)
 {
+    float a1, l1, p1, a2, l2, p2, aux;
+    scanf("%f", &a1);
+    scanf("%f", &l1);
+    scanf("%f", &p1);
+    scanf("%f", &a2);
+    scanf("%f", &l2);
+    scanf("%f", &p2);
+    if (a1 > l1) { aux = a1; a1 = l1; l1 = aux; }
+    if (l1 > p1) { aux = l1; l1 = p1; p1 = aux; }
+    if (a1 > l1) { aux = a1; a1 = l1; l1 = aux; }
+    if (a2 > l2) { aux = a2; a2 = l2; l2 = aux; }
+    if (l2 > p2) { aux = l2; l2 = p2; p2 = aux; }
+    if (a2 > l2) { aux = a2; a2 = l2; l2 = aux; }
+    if (a1 <= a2 && l1 <= l2 && p1 <= p2) {
+        printf("1");
+    } else {
+        printf("0");
+    }
 }
 
 /*
