@@ -1674,6 +1674,22 @@ void c00003500(void)
  */
 void c00003600(void)
 {
+    int n1, n2, n3, n4, n5, n6;
+    scanf("%d", &n1);
+    scanf("%d", &n2);
+    scanf("%d", &n3);
+    scanf("%d", &n4);
+    scanf("%d", &n5);
+    scanf("%d", &n6);
+    int impares = 0;
+    int somaPares = 0;
+    if (n1%2 != 0) { impares++; } else { somaPares += n1; }
+    if (n2%2 != 0) { impares++; } else { somaPares += n2; }
+    if (n3%2 != 0) { impares++; } else { somaPares += n3; }
+    if (n4%2 != 0) { impares++; } else { somaPares += n4; }
+    if (n5%2 != 0) { impares++; } else { somaPares += n5; }
+    if (n6%2 != 0) { impares++; } else { somaPares += n6; }
+    printf("%d %d", impares, somaPares);
 }
 
 /*
