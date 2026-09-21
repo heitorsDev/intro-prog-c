@@ -1704,6 +1704,15 @@ void c00003600(void)
  */
 void c0003650(void)
 {
+    int lancamentos, acervo;
+    scanf("%d", &lancamentos);
+    scanf("%d", &acervo);
+    int gratis = lancamentos/2;
+    if (gratis > acervo) {
+        gratis = acervo;
+    }
+    float total = lancamentos*5 + (acervo-gratis)*3;
+    printf("%.2f", total);
 }
 
 /*
