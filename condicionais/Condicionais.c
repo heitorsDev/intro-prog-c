@@ -977,6 +977,23 @@ void c00001400(void)
  */
 void c00001500(void)
 {
+    int v1, v2, v3, v4, v5;
+    scanf("%d", &v1);
+    scanf("%d", &v2);
+    scanf("%d", &v3);
+    scanf("%d", &v4);
+    scanf("%d", &v5);
+    if (v1 == v2 && v2 == v3 && v3 == v4 && v4 == v5) {
+        printf("1");
+    } else if ((v1 == v2 && v2 == v3 && v3 == v4) || (v2 == v3 && v3 == v4 && v4 == v5)) {
+        printf("2");
+    } else if (v2-v1 == 1 && v3-v2 == 1 && v4-v3 == 1 && v5-v4 == 1) {
+        printf("3");
+    } else if ((v1 == v2 && v2 == v3 && v4 == v5) || (v1 == v2 && v3 == v4 && v4 == v5)) {
+        printf("4");
+    } else {
+        printf("5");
+    }
 }
 
 /*
