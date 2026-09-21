@@ -296,6 +296,22 @@ void c00000450(void)
  */
 void c00000460(void)
 {
+    char expr[4];
+    scanf("%3s", expr);
+    int a = expr[0]-'0';
+    int b = expr[2]-'0';
+    char op = expr[1];
+    float result;
+    if (op == '+') {
+        result = a+b;
+    } else if (op == '-') {
+        result = a-b;
+    } else if (op == '*') {
+        result = a*b;
+    } else {
+        result = (float)a/b;
+    }
+    printf("%.2f", result);
 }
 
 /*
