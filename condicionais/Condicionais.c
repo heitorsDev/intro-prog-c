@@ -1039,6 +1039,18 @@ void c00001550(void)
  */
 void c00001600(void)
 {
+    int dn, mn, an, da, ma, aa;
+    scanf("%d", &dn);
+    scanf("%d", &mn);
+    scanf("%d", &an);
+    scanf("%d", &da);
+    scanf("%d", &ma);
+    scanf("%d", &aa);
+    int idade = aa-an;
+    if (ma < mn || (ma == mn && da < dn)) {
+        idade--;
+    }
+    printf("%d", idade);
 }
 
 /*
