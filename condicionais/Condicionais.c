@@ -618,6 +618,16 @@ void c00000800(void)
  */
 void c00000810(void)
 {
+    int n;
+    scanf("%d", &n);
+    int d1 = n/100;
+    int d2 = n%100;
+    int soma = d1+d2;
+    if (soma*soma == n) {
+        printf("1");
+    } else {
+        printf("0");
+    }
 }
 
 /*
