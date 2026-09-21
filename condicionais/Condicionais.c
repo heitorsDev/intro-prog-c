@@ -1499,6 +1499,15 @@ void c00002150(void)
  */
 void c00003000(void)
 {
+    int d, ds;
+    scanf("%d", &d);
+    scanf("%d", &ds);
+    int diff = (d-1) % 7;
+    int primeiro = ds-diff;
+    while (primeiro < 1) {
+        primeiro += 7;
+    }
+    printf("%d", primeiro);
 }
 
 /*
