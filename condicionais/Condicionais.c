@@ -592,6 +592,17 @@ void c00000750(void)
  */
 void c00000800(void)
 {
+    float v1, v2, v3, v4, aux;
+    scanf("%f", &v1);
+    scanf("%f", &v2);
+    scanf("%f", &v3);
+    scanf("%f", &v4);
+    if (v1 < v2) { aux = v1; v1 = v2; v2 = aux; }
+    if (v3 < v4) { aux = v3; v3 = v4; v4 = aux; }
+    if (v1 < v3) { aux = v1; v1 = v3; v3 = aux; }
+    if (v2 < v4) { aux = v2; v2 = v4; v4 = aux; }
+    if (v2 < v3) { aux = v2; v2 = v3; v3 = aux; }
+    printf("%.2f %.2f %.2f", v1, v2, v3);
 }
 
 /*
