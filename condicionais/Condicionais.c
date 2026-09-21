@@ -1455,6 +1455,34 @@ void c00002100(void)
  */
 void c00002150(void)
 {
+    float x0, y0, x1, y1, x2, y2, x3, y3;
+    scanf("%f", &x0);
+    scanf("%f", &y0);
+    scanf("%f", &x1);
+    scanf("%f", &y1);
+    scanf("%f", &x2);
+    scanf("%f", &y2);
+    scanf("%f", &x3);
+    scanf("%f", &y3);
+    float l01 = sqrt((x0-x1)*(x0-x1)+(y0-y1)*(y0-y1));
+    float l12 = sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2));
+    float l23 = sqrt((x2-x3)*(x2-x3)+(y2-y3)*(y2-y3));
+    float l30 = sqrt((x3-x0)*(x3-x0)+(y3-y0)*(y3-y0));
+    float d02 = sqrt((x0-x2)*(x0-x2)+(y0-y2)*(y0-y2));
+    float d13 = sqrt((x1-x3)*(x1-x3)+(y1-y3)*(y1-y3));
+    if (l01 == l12 && l12 == l23 && l23 == l30 && d02 == d13) {
+        printf("1");
+    } else if (l01 == l23 && l12 == l30 && d02 == d13) {
+        printf("2");
+    } else if (l01 == l12 && l12 == l23 && l23 == l30) {
+        printf("3");
+    } else if (l01 == l23 && l12 == l30) {
+        printf("4");
+    } else if ((l01 == l12 && l23 == l30) || (l01 == l30 && l12 == l23)) {
+        printf("5");
+    } else {
+        printf("6");
+    }
 }
 
 /*
