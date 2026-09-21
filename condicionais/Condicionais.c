@@ -1655,6 +1655,15 @@ void c00003400(void)
  */
 void c00003500(void)
 {
+    int n;
+    scanf("%d", &n);
+    int primo = 1;
+    for (int i = 2; i < n; i++) {
+        if (n % i == 0) {
+            primo = 0;
+        }
+    }
+    printf("%d", primo);
 }
 
 /*
