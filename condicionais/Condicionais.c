@@ -267,6 +267,21 @@ void c00000410(void)
  */
 void c00000450(void)
 {
+    float op1, op2, result;
+    char op;
+    scanf("%f", &op1);
+    scanf(" %c", &op);
+    scanf("%f", &op2);
+    if (op == '+') {
+        result = op1+op2;
+    } else if (op == '-') {
+        result = op1-op2;
+    } else if (op == '*') {
+        result = op1*op2;
+    } else {
+        result = op1/op2;
+    }
+    printf("%.2f", result);
 }
 
 /*
