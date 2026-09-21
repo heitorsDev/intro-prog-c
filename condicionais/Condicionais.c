@@ -447,6 +447,43 @@ void c00000625(void)
  */
 void c00000650(void)
 {
+    float n1, n2, n3;
+    scanf("%f", &n1);
+    scanf("%f", &n2);
+    scanf("%f", &n3);
+    float mh;
+    if (n1 == 0 || n2 == 0 || n3 == 0) {
+        mh = 0;
+    } else {
+        mh = 3/(1/n1+1/n2+1/n3);
+    }
+    if (mh < 6.0) {
+        float menor = n1;
+        if (n2 < menor) menor = n2;
+        if (n3 < menor) menor = n3;
+        float a = n1, b = n2, c = n3;
+        if (menor == a) { a = 10; } else if (menor == b) { b = 10; } else { c = 10; }
+        float mhMax = (a == 0 || b == 0 || c == 0) ? 0 : 3/(1/a+1/b+1/c);
+        if (mhMax >= 6.0) {
+            float rec;
+            scanf("%f", &rec);
+            if (menor == n1) { n1 = rec; } else if (menor == n2) { n2 = rec; } else { n3 = rec; }
+            mh = (n1 == 0 || n2 == 0 || n3 == 0) ? 0 : 3/(1/n1+1/n2+1/n3);
+        }
+    }
+    int conceito;
+    if (mh < 6.0) {
+        conceito = 0;
+    } else if (mh < 7.0) {
+        conceito = 1;
+    } else if (mh < 8.0) {
+        conceito = 2;
+    } else if (mh < 9.0) {
+        conceito = 3;
+    } else {
+        conceito = 4;
+    }
+    printf("%.2f %d", mh, conceito);
 }
 
 /*
